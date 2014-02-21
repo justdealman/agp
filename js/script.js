@@ -170,63 +170,63 @@ $(document).ready(function () {
 	
 	// 3 previews
 	
-	$('.slides ul.pagination.size3 li.img1 img.big').css({'width': pwidth*3-splitter+'px', 'height': pheight*3-splitter+'px'});
-	$('.slides ul.pagination.size3 li.img2 img.big').css({'left': pwidth*3+'px', 'width': pwidth*2+'px', 'height': pheight*2-splitter+'px'});
-	$('.slides ul.pagination.size3 li.img3 img.big').css({'left': pwidth*3+'px', 'top': pheight*2+'px', 'width': pwidth*2+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size3 li.img1 img.small').css({'width': pwidth*3+'px', 'height': pheight*2-splitter+'px'});
-	$('.slides ul.pagination.size3 li.img2 img.small').css({'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size3 li.img3 img.small').css({'left': pwidth+'px', 'top': pheight*2+'px', 'width': pwidth*2+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size3 li.img1 span.big').css({'width': pwidth*3-splitter+'px', 'height': pheight*3-splitter+'px'});
+	$('.slides ul.pagination.size3 li.img2 span.big').css({'left': pwidth*3+'px', 'width': pwidth*2+'px', 'height': pheight*2-splitter+'px'});
+	$('.slides ul.pagination.size3 li.img3 span.big').css({'left': pwidth*3+'px', 'top': pheight*2+'px', 'width': pwidth*2+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size3 li.img1 span.small').css({'width': pwidth*3+'px', 'height': pheight*2-splitter+'px'});
+	$('.slides ul.pagination.size3 li.img2 span.small').css({'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size3 li.img3 span.small').css({'left': pwidth+'px', 'top': pheight*2+'px', 'width': pwidth*2+'px', 'height': pheight-splitter+'px'});
 	
 	// 5 previews
 	
-	$('.slides ul.pagination.size5 li.img1 img.big').css({'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size5 li.img2 img.big').css({'left': pwidth*2+'px', 'width': pwidth*3+'px', 'height': pheight*2-splitter+'px'});
-	$('.slides ul.pagination.size5 li.img3 img.big').css({'top': pheight+'px', 'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
-	$('.slides ul.pagination.size5 li.img4 img.big').css({'left': pwidth*2+'px', 'top': pheight*2+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size5 li.img5 img.big').css({'left': pwidth*4+'px', 'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size5 li.img1 img.small').css({'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
-	$('.slides ul.pagination.size5 li.img2 img.small').css({'left': pwidth*2+'px', 'width': pwidth+'px', 'height': pheight+'px'});
-	$('.slides ul.pagination.size5 li.img3 img.small').css({'left': pwidth*2+'px', 'top': pheight-splitter+'px', 'width': pwidth+'px', 'height': pheight+'px'});
-	$('.slides ul.pagination.size5 li.img4 img.small').css({'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight+'px'});
-	$('.slides ul.pagination.size5 li.img5 img.small').css({'left': pwidth+'px', 'top': pheight*2+'px', 'width': pwidth*2+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size5 li.img1 span.big').css({'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size5 li.img2 span.big').css({'left': pwidth*2+'px', 'width': pwidth*3+'px', 'height': pheight*2-splitter+'px'});
+	$('.slides ul.pagination.size5 li.img3 span.big').css({'top': pheight+'px', 'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
+	$('.slides ul.pagination.size5 li.img4 span.big').css({'left': pwidth*2+'px', 'top': pheight*2+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size5 li.img5 span.big').css({'left': pwidth*4+'px', 'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size5 li.img1 span.small').css({'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
+	$('.slides ul.pagination.size5 li.img2 span.small').css({'left': pwidth*2+'px', 'width': pwidth+'px', 'height': pheight+'px'});
+	$('.slides ul.pagination.size5 li.img3 span.small').css({'left': pwidth*2+'px', 'top': pheight-splitter+'px', 'width': pwidth+'px', 'height': pheight+'px'});
+	$('.slides ul.pagination.size5 li.img4 span.small').css({'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight+'px'});
+	$('.slides ul.pagination.size5 li.img5 span.small').css({'left': pwidth+'px', 'top': pheight*2+'px', 'width': pwidth*2+'px', 'height': pheight-splitter+'px'});
 	
 	// 7 previews
 	
-	$('.slides ul.pagination.size7 li.img1 img.big').css({'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img2 img.big').css({'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img3 img.big').css({'left': pwidth*3+'px', 'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img4 img.big').css({'top': pheight+'px', 'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img5 img.big').css({'left': pwidth*2+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img6 img.big').css({'left': pwidth*2+'px', 'top': pheight*2+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img7 img.big').css({'left': pwidth*4+'px', 'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img1 img.small').css({'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img2 img.small').css({'left': pwidth+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img3 img.small').css({'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img4 img.small').css({'left': pheight+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img5 img.small').css({'left': pwidth*2+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img6 img.small').css({'top': pheight*2+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size7 li.img7 img.small').css({'left': pwidth*2+'px', 'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img1 span.big').css({'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img2 span.big').css({'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img3 span.big').css({'left': pwidth*3+'px', 'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img4 span.big').css({'top': pheight+'px', 'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img5 span.big').css({'left': pwidth*2+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img6 span.big').css({'left': pwidth*2+'px', 'top': pheight*2+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img7 span.big').css({'left': pwidth*4+'px', 'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img1 span.small').css({'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img2 span.small').css({'left': pwidth+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img3 span.small').css({'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img4 span.small').css({'left': pheight+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img5 span.small').css({'left': pwidth*2+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img6 span.small').css({'top': pheight*2+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size7 li.img7 span.small').css({'left': pwidth*2+'px', 'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
 	
 	// 9 previews
 	
-	$('.slides ul.pagination.size9 li.img1 img.big').css({'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img2 img.big').css({'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img3 img.big').css({'left': pwidth*3+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img4 img.big').css({'top': pheight+'px', 'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img5 img.big').css({'left': pwidth*2+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img6 img.big').css({'left': pwidth*3+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img7 img.big').css({'left': pwidth*4+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img8 img.big').css({'left': pwidth*2+'px', 'top': pheight*2+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img9 img.big').css({'left': pwidth*4+'px', 'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img1 img.small').css({'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img2 img.small').css({'left': pwidth+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img3 img.small').css({'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img4 img.small').css({'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img5 img.small').css({'top': pheight+'px', 'left': pwidth+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img6 img.small').css({'top': pheight+'px', 'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img7 img.small').css({'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img8 img.small').css({'top': pheight*2+'px', 'left': pwidth+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
-	$('.slides ul.pagination.size9 li.img9 img.small').css({'top': pheight*2+'px', 'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img1 span.big').css({'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img2 span.big').css({'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img3 span.big').css({'left': pwidth*3+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img4 span.big').css({'top': pheight+'px', 'width': pwidth*2-splitter+'px', 'height': pheight*2-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img5 span.big').css({'left': pwidth*2+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img6 span.big').css({'left': pwidth*3+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img7 span.big').css({'left': pwidth*4+'px', 'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img8 span.big').css({'left': pwidth*2+'px', 'top': pheight*2+'px', 'width': pwidth*2-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img9 span.big').css({'left': pwidth*4+'px', 'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img1 span.small').css({'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img2 span.small').css({'left': pwidth+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img3 span.small').css({'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img4 span.small').css({'top': pheight+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img5 span.small').css({'top': pheight+'px', 'left': pwidth+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img6 span.small').css({'top': pheight+'px', 'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img7 span.small').css({'top': pheight*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img8 span.small').css({'top': pheight*2+'px', 'left': pwidth+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
+	$('.slides ul.pagination.size9 li.img9 span.small').css({'top': pheight*2+'px', 'left': pwidth*2+'px', 'width': pwidth-splitter+'px', 'height': pheight-splitter+'px'});
 	
 	$('.object .slides .show').click(
 		function() {
@@ -279,7 +279,6 @@ $(document).ready(function () {
 	
 	var swidth = Math.floor( documentWidth / 10);
 	var sheight = Math.floor (documentHeight / 3) + 2;
-	
 	$('.column1 .stage1').css({'width': swidth-splitter+'px', 'height': sheight-splitter+'px'});
 	$('.column1 .stage2').css({'left': swidth+'px', 'width': swidth-splitter+'px', 'height': sheight-splitter+'px'});
 	$('.column1 .stage3').css({'top': sheight+'px', 'width': swidth-splitter+'px', 'height': sheight-splitter+'px'});

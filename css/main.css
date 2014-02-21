@@ -639,6 +639,34 @@ background:pink;
 .slides ul.pagination.active {
 	width:413px;
 }
+.slides ul.pagination li span {
+	position:absolute;
+	left:0;
+	top:0;
+	display:block;
+	background-repeat:no-repeat;
+	background-position:center center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+.slides ul.pagination li span.small {
+	display:none;
+}
+.slides ul.pagination li span {
+	opacity:0.5;
+}
+.slides ul.pagination li span:hover {
+	opacity:1;
+}
+.slides ul.pagination.active li span.big {
+	display:none;
+}
+.slides ul.pagination.active li span.small {
+	display:block;
+}
+
 
 .history-stages {
 	position:absolute;
