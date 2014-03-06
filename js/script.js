@@ -8,6 +8,28 @@ $(window).load(function () {
 		play: 10000,
 		pause: 0
 	});
+	if (location.hash!=0) {
+		var objectid = location.hash.substring(1);
+		$('.object.'+objectid).fadeIn(0);
+		$('nav, header h1').fadeOut(0);
+		var text = $('nav li.show > a[data-accessory='+objectid+']').attr('data-inform');
+		$('.slide-insert').empty();
+		$('.slide-insert').append(text);
+		$('.tip-nav li.home > a, .b-logo a').bind('click', 
+			function() {
+				$('.slide-insert').empty();
+				$('nav, header h1').fadeIn(1000);
+				$('.object').fadeOut(1000);
+				$('.object .info').css({'left': -2*pwidth+'px'});
+				$('.object .slides').css({'left': '0'});
+				$('.object .slides .show').fadeIn(0);
+				$('.object .slides .pagination').removeClass('active');
+				location.hash.empty();
+				return false;
+			}
+		);
+		return false;
+	}
 });
 $(document).ready(function () {
 
@@ -50,9 +72,9 @@ $(document).ready(function () {
 		}
 	);
 	$('nav ul li').has('ul').addClass('sub');
-
+	
     function bindHoverFlux(){
-        $('.slidecontainer .images div').hover(
+        $('.slidecontainer.hoverable .images div').hover(
             function() {
                 $('nav, header > h1').fadeOut(0);
                 var text = "";
@@ -66,7 +88,7 @@ $(document).ready(function () {
         );
     }
 
-	bindHoverFlux();
+	// bindHoverFlux();
 
 	var sliderheight = $('.b-slider').height();
 	
@@ -74,6 +96,7 @@ $(document).ready(function () {
 	$('nav li.show > a').bind('click', 
 		function() {
 			var objectid = $(this).attr('data-accessory');
+			location.hash = objectid;
 			$('.object.'+objectid).fadeIn(1000);
 			$('nav, header h1').fadeOut(0);
 			var text = "";
@@ -89,6 +112,7 @@ $(document).ready(function () {
 					$('.object .slides').css({'left': '0'});
 					$('.object .slides .show').fadeIn(0);
 					$('.object .slides .pagination').removeClass('active');
+					location.hash.empty();
 					return false;
 				}
 			);
@@ -99,7 +123,9 @@ $(document).ready(function () {
 	$('.b-slider .images > div').bind('click', 
 		function() {
 			var objectid = $(this).attr('data-accessory');
+			location.hash = 'object'+objectid;
 			$('.object.object'+objectid).fadeIn(1000);
+			$('nav, header h1').fadeOut(0);
 			var text = "";
 			var text = $(this).attr('data-inform');
 			$('.slide-insert').append(text);
@@ -112,12 +138,15 @@ $(document).ready(function () {
 					$('.object .slides').css({'left': '0'});
 					$('.object .slides .show').fadeIn(0);
 					$('.object .slides .pagination').removeClass('active');
+					location.hash.empty();
 					return false;
 				}
 			);
 			return false;
 		}
 	);
+	
+
 
 //	$('nav li.show > a.object2, #slider2 .image1').bind('click',
 //		function() {
