@@ -250,6 +250,7 @@ header h1 {
 	position:relative;
     overflow: hidden;
     margin: 0 0 28px 0;
+	margin-bottom: 58px;
 }
 /*--------------slider--------------*/
 .b-slider{
@@ -353,6 +354,12 @@ button{
 .b-history{
     width: 100%;
 
+}
+.b-history.absolute {
+	position: absolute;
+	left: 0;
+	top: 0;
+	
 }
 .b-history .column1, .b-history .column2, .b-history .column3{
 	position:relative;
@@ -672,10 +679,50 @@ background:pink;
 	position:absolute;
 	left:0;
 	top:0;
+	width:200px;
+	height:200px;
 }
 .history-stages img {
 	position:absolute;
 	cursor:pointer;
+}
+
+body {
+	opacity:0;
+}
+.loading {
+	position:absolute;
+	left:0;
+	top:315px;
+	z-index:1020;
+	width:100%;
+	overflow:hidden;
+	padding:8px 0;
+	background:url('../img/bodyback.png') repeat;
+}
+.loading  > div {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:120px;
+	height:120px;
+	margin:-80px 0 0 -60px;
+	background:url('../img/letsrock.png') no-repeat left top;
+	-moz-animation:spin 2s infinite linear;
+	-webkit-animation:spin 2s infinite linear;
+	animation:spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
 
 @media screen and (max-height: 768px) {
@@ -693,6 +740,9 @@ background:pink;
 		top:261px;
 	}
 	.object-fade {
+		top:261px;
+	}
+	.loading {
 		top:261px;
 	}
 }
