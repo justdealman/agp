@@ -34,6 +34,7 @@ $(window).load(function () {
 	$('.loading').fadeOut(150);
 });
 $(document).ready(function () {
+	$('.b-history.object').fadeOut(150);
 
 	$('body').delay(500).animate({'opacity': '1'});
 	
@@ -109,21 +110,7 @@ $(document).ready(function () {
 			$('.slide-insert').empty();
 			$('.slide-insert').append(text);
 			
-			// load mCustomScrollBar if it must be here
-			if($('.b-history .column2').length>0){
-				$('.column2').mCustomScrollbar({
-					theme:"dark",
-					scrollButtons:{
-						enable:true
-					},
-					callbacks:{
-						whileScrolling:function(){
-							scrolling();
-						}
-					}
 
-				});
-			}
 			
 			$('.tip-nav li.home > a, .b-logo a').bind('click', 
 				function() {
@@ -341,22 +328,20 @@ $(document).ready(function () {
 	$('.column1 .stage5').css({'top': sheight*2+'px', 'width': swidth-splitter+'px', 'height': sheight-splitter+'px'});
 	$('.column1 .stage6').css({'left': swidth+'px', 'top': sheight*2+'px', 'width': swidth-splitter+'px', 'height': sheight-splitter+'px'});
 
-			// load mCustomScrollBar if it must be here
-			if($('.b-history .column2').length>0){
-				$('.column2').mCustomScrollbar({
-					theme:"dark",
-					scrollButtons:{
-						enable:true
-					},
-					callbacks:{
-						whileScrolling:function(){
-							scrolling();
-						}
-					}
-
-				});
+	// load mCustomScrollBar if it must be here
+	if($('.b-history .column2').length>0){
+		$('.column2').mCustomScrollbar({
+			theme:"dark",
+			scrollButtons:{
+				enable:true
+			},
+			callbacks:{
+				whileScrolling:function(){
+					scrolling();
+				}
 			}
-
+		});
+	}
 
     // load flexslider if it must be here
     if($('#b-slider-history').length>0){

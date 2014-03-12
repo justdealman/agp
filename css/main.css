@@ -746,3 +746,7 @@ body {
 		top:261px;
 	}
 }
+
+.b-history.object {
+	display:block;
+}
