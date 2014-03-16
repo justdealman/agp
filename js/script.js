@@ -99,7 +99,7 @@ $(document).ready(function () {
 	var sliderheight = $('.b-slider').height();
 	
 	
-	$('nav li.show > a, .b-slider .images > div').bind('click', 
+	$('nav li.show > a, .b-slider .images > div, .b-search ul li').bind('click', 
 		function() {
 			var objectid = $(this).attr('data-accessory');
 			location.hash = objectid;
@@ -129,36 +129,18 @@ $(document).ready(function () {
 		}
 	);
 	
-	$('.b-slider .images > div').bind('click', 
+	$('.b-search ul li').bind('click',
 		function() {
-			var objectid = $(this).attr('data-accessory');
-			location.hash = 'object'+objectid;
-			$('.object.object'+objectid).fadeIn(1000);
-			$('nav, header h1').fadeOut(0);
-			var text = "";
-			var text = $(this).attr('data-inform');
-			$('.slide-insert').append(text);
-			
-			
-			
-			
-			$('.tip-nav li.home > a, .b-logo a').bind('click', 
-				function() {
-					$('.slide-insert').empty();
-					$('nav, header h1').fadeIn(0);
-					$('.object').fadeOut(1000);
-					$('.object .info').css({'left': -2*pwidth+'px'});
-					$('.object .slides').css({'left': '0'});
-					$('.object .slides .show').fadeIn(0);
-					$('.object .slides .pagination').removeClass('active');
-					location.hash.empty();
-					return false;
-				}
-			);
+			event.preventDefault();
+			$(this).parents('.b-search').find('p input').val('');
+			$(this).parents('.b-search').find('p input').stop(true, true).animate({'left': '239px'}, 500, 'easeInQuad'); 
+			$(this).parents('.b-search').children('a').addClass('default');
+			$('.b-search ul').slideUp(0);
 			return false;
+
 		}
 	);
-	
+
 
 
 //	$('nav li.show > a.object2, #slider2 .image1').bind('click',
@@ -327,6 +309,9 @@ $(document).ready(function () {
 	$('.column1 .stage4').css({'left': swidth+'px', 'top': sheight+'px', 'width': swidth-splitter+'px', 'height': sheight-splitter+'px'});
 	$('.column1 .stage5').css({'top': sheight*2+'px', 'width': swidth-splitter+'px', 'height': sheight-splitter+'px'});
 	$('.column1 .stage6').css({'left': swidth+'px', 'top': sheight*2+'px', 'width': swidth-splitter+'px', 'height': sheight-splitter+'px'});
+	
+	$('.history-stages').css({'width': swidth*2-splitter+'px'});
+	$('.column1 .single').css({'width': swidth*2-splitter+'px', 'height': sheight*3-splitter+'px'});
 
 	// load mCustomScrollBar if it must be here
 	if($('.b-history .column2').length>0){
