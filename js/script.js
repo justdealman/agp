@@ -316,6 +316,10 @@ $(document).ready(function () {
 	// load mCustomScrollBar if it must be here
 	
 	$('.b-history').each(function() {
+	
+		var activescroll = $(this).find('.column2');
+		
+		
 		if($(this).find('.column2').length>0){
 			$(this).find('.column2').mCustomScrollbar({
 				theme:"dark",
@@ -324,11 +328,104 @@ $(document).ready(function () {
 				},
 				callbacks:{
 					whileScrolling:function(){
-						scrolling();
+				
+						if ($(this).find('.a').length>0) {
+				
+							if ($(this).hasClass('active1')) {
+								if ( $(this).find('.a').offset().top>302 && $(this).find('.a').offset().top>=301){
+									$(this).parents('.b-history').find('#b-slider-history').animate({"margin-top" : "0"}, 300);
+									$(this).removeClass('active1');
+								}
+							}
+							else {
+								if ( $(this).find('.a').offset().top<300 && $(this).find('.a').offset().top<=301){
+									$(this).parents('.b-history').find('#b-slider-history').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
+									$(this).addClass('active1');
+								}
+							}
+						
+						}
+
+						if ($(this).find('.b').length>0) {
+						
+							if ($(this).hasClass('active2')) {
+								if( $(this).find('.b').offset().top>302 && $(this).find('.b').offset().top>=301){
+									$(this).parents('.b-history').find('#b-slider-history2').animate({"margin-top" : "0"}, 300);
+									$(this).removeClass('active2');
+								}
+							}
+							else {
+								if( $(this).find('.b').offset().top<300 && $(this).find('.b').offset().top<=301){
+									$(this).parents('.b-history').find('#b-slider-history2').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
+									$(this).addClass('active2');
+								}
+							}
+						
+						}
+						
+						if ($(this).find('.c').length>0) {
+
+							if ($(this).hasClass('active3')) {
+								if( $(this).find('.c').offset().top>302 && $(this).find('.c').offset().top>=301){
+									$(this).parents('.b-history').find('#b-slider-history3').animate({"margin-top" : "0"}, 300);
+									$(this).removeClass('active3');
+								}
+							}
+							else {
+								if( $(this).find('.c').offset().top<300 && $(this).find('.c').offset().top<=301){
+									$(this).parents('.b-history').find('#b-slider-history3').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
+									$(this).addClass('active3');
+								}
+							}
+						
+						}
+						
+						if ($(this).find('.d').length>0) {
+
+							if ($(this).hasClass('active4')) {
+								if( $(this).find('.d').offset().top>302 && $(this).find('.d').offset().top>=301){
+									$(this).parents('.b-history').find('#b-slider-history4').animate({"margin-top" : "0"}, 300);
+									$(this).removeClass('active4');
+								}
+							}
+							else {
+								if( $(this).find('.d').offset().top<300 && $(this).find('.d').offset().top<=301){
+									$(this).parents('.b-history').find('#b-slider-history4').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
+									$(this).addClass('active4');
+								}
+							}
+							
+						}
+						
+						if ($(this).find('.e').length>0) {
+
+							if ($(this).hasClass('active5')) {
+								if( $(this).find('.e').offset().top>302 && $(this).find('.e').offset().top>=301){
+									$(this).parents('.b-history').find('#b-slider-history5').animate({"margin-top" : "0"}, 300);
+									$(this).removeClass('active5');
+								}
+							}
+							else {
+								if( $(this).find('.e').offset().top<300 && $(this).find('.e').offset().top<=301){
+									$(this).parents('.b-history').find('#b-slider-history5').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
+									$(this).addClass('active5');
+								}
+							}
+							
+						}
+						
 					}
 				}
 			});
 		}
+		
+
+		
+		
+		
+		
+		
+		
 	});
 
     // load flexslider if it must be here
@@ -394,101 +491,28 @@ $(document).ready(function () {
 	
 
     //перелистываем слайдеры
-
-    function scrolling(){
+	$('.b-history').each(function() {
 	
-			$('.b-history').each(function() {
-			
-				if($(this).find('span.year').length>0){
-		
-					if ($(this).find('.column2').hasClass('active1')) {
-						if($(this).find('.a').offset().top>302 && $(this).find('.a').offset().top>=301){
-							$(this).find('#b-slider-history').animate({"margin-top" : "0"}, 300);
-							$(this).find('.column2').removeClass('active1');
-						}
-					}
-					else {
-						if($(this).find('.a').offset().top<300 && $(this).find('.a').offset().top<=301){
-							$(this).find('#b-slider-history').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
-							$(this).find('.column2').addClass('active1');
-						}
-					}
-
-					if ($(this).find('.column2').hasClass('active2')) {
-						if($(this).find('.b').offset().top>302 && $(this).find('.b').offset().top>=301){
-							$(this).find('#b-slider-history2').animate({"margin-top" : "0"}, 300);
-							$(this).find('.column2').removeClass('active2');
-						}
-					}
-					else {
-						if($(this).find('.b').offset().top<300 && $(this).find('.b').offset().top<=301){
-							$(this).find('#b-slider-history2').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
-							$(this).find('.column2').addClass('active2');
-						}
-					}
-
-					if ($(this).find('.column2').hasClass('active3')) {
-						if($(this).find('.c').offset().top>302 && $(this).find('.c').offset().top>=301){
-							$(this).find('#b-slider-history3').animate({"margin-top" : "0"}, 300);
-							$(this).find('.column2').removeClass('active3');
-						}
-					}
-					else {
-						if($(this).find('.c').offset().top<300 && $(this).find('.c').offset().top<=301){
-							$(this).find('#b-slider-history3').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
-							$(this).find('.column2').addClass('active3');
-						}
-					}
-
-					if ($(this).find('.column2').hasClass('active4')) {
-						if($(this).find('.d').offset().top>302 && $(this).find('.d').offset().top>=301){
-							$(this).find('#b-slider-history4').animate({"margin-top" : "0"}, 300);
-							$(this).find('.column2').removeClass('active4');
-						}
-					}
-					else {
-						if($(this).find('.d').offset().top<300 && $(this).find('.d').offset().top<=301){
-							$(this).find('#b-slider-history4').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
-							$(this).find('.column2').addClass('active4');
-						}
-					}
-
-					if ($('.column2').hasClass('active5')) {
-						if($(this).find('.e').offset().top>302 && $(this).find('.e').offset().top>=301){
-							$(this).find('#b-slider-history5').animate({"margin-top" : "0"}, 300);
-							$(this).find('.column2').removeClass('active5');
-						}
-					}
-					else {
-						if($(this).find('.e').offset().top<300 && $(this).find('.e').offset().top<=301){
-							$(this).find('#b-slider-history5').animate({"margin-top" : "-" + documentHeight + "px"}, 300);
-							$(this).find('.column2').addClass('active5');
-						}
-					}
-				
-				}
-				
-			
-			});
-    }
+		$(this).find('.history-stages .stage1').click(function() {
+			$(this).parents('.b-history').find('.column2').mCustomScrollbar('scrollTo', 'span.year.a');
+		});
+		$(this).find('.history-stages .stage2').click(function() {
+			$(this).parents('.b-history').find('.column2').mCustomScrollbar('scrollTo', 'span.year.b');
+		});
+		$(this).find('.history-stages .stage3').click(function() {
+			$(this).parents('.b-history').find('.column2').mCustomScrollbar('scrollTo', 'span.year.c');
+		});
+		$(this).find('.history-stages .stage4').click(function() {
+			$(this).parents('.b-history').find('.column2').mCustomScrollbar('scrollTo', 'span.year.d');
+		});
+		$(this).find('.history-stages .stage5').click(function() {
+			$(this).parents('.b-history').find('.column2').mCustomScrollbar('scrollTo', 'span.year.e');
+		});
+		$(this).find('.history-stages .stage6').click(function() {
+			$(this).parents('.b-history').find('.column2').mCustomScrollbar('scrollTo', 'span.year.f');
+		});
 	
-	$('.history-stages .stage1').click(function() {
-		$('.column2').mCustomScrollbar('scrollTo', 'span.year.a');
-	});
-	$('.history-stages .stage2').click(function() {
-		$('.column2').mCustomScrollbar('scrollTo', 'span.year.b');
-	});
-	$('.history-stages .stage3').click(function() {
-		$('.column2').mCustomScrollbar('scrollTo', 'span.year.c');
-	});
-	$('.history-stages .stage4').click(function() {
-		$('.column2').mCustomScrollbar('scrollTo', 'span.year.d');
-	});
-	$('.history-stages .stage5').click(function() {
-		$('.column2').mCustomScrollbar('scrollTo', 'span.year.e');
-	});
-	$('.history-stages .stage6').click(function() {
-		$('.column2').mCustomScrollbar('scrollTo', 'span.year.f');
+	
 	});
 	
 
