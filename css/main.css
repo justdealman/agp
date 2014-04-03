@@ -35,7 +35,7 @@ height:100px;
 header{
 margin:0 auto;
 width:100%;
-height:315px;
+height:230px;
 position:relative;
 z-index:10000;
 }
@@ -51,7 +51,7 @@ width:100%;
 }
 /*-----------------------------------BLOCKS----------------------------------*/
 .b-logo{
-    padding: 104px 0 0 131px;
+    padding: 54px 0 0 131px;
     overflow: hidden;
     float: left;
 	padding-left:5%;
@@ -62,18 +62,20 @@ width:100%;
     height: 122px;
     background: url('../img/logo.png') no-repeat;
 }
-nav{
+nav, .nav2{
+	position: relative;
+	z-index: 10;
     display: block;
-    padding: 164px 0 0 0;
+    padding: 114px 0 0 0;
     margin: 0 0 30px 382px;
 }
-nav ul{
+nav ul, .nav2 ul{
 	width:124px;
 	position:relative;
     list-style: none;
 	margin:0 0 29px;
 }
-nav ul li{
+nav ul li, .nav2 ul li{
 	font-size:14px;
 	line-height:18px;
 	font-weight:bold;
@@ -81,22 +83,22 @@ nav ul li{
     padding: 0 20px 0 0;
 	margin:0 0 4px;
 }
-nav ul li a{
+nav ul li a, .nav2 ul li a{
 	position:relative;
 	z-index:10;
 	display:block;
     color: #000000 !important;
 	padding:0 21px 0 0;
 }
-nav ul li a:hover{
+nav ul li a:hover, .nav2 ul li a:hover{
     color: #009564 !important;
 	text-decoration:none;
 }
-nav ul li.sub.active > a {
+nav ul li.sub.active > a, .nav2 ul li.sub.active > a {
     color: #009564 !important;
 	background:url('../img/nav_arrow.png') no-repeat right top;
 }
-nav ul li ul {
+nav ul li ul, .nav2 ul li ul {
 	display:none;
 	position:absolute;
 	left:94px;
@@ -106,18 +108,18 @@ nav ul li ul {
 	margin:0;
 	background:url('../img/nav_opacity.png') repeat;
 }
-nav ul li ul li a {
+nav ul li ul li a, .nav2 ul li ul li a {
 	display:block;
 	width:293px;
 	padding:0 23px 0 0;
 }
-nav ul li ul li ul {
+nav ul li ul li ul, .nav2 ul li ul li ul {
 	position:absolute;
 	left:333px;
 	top:0;
 	margin:0;
 }
-nav ul li ul li ul li a {
+nav ul li ul li ul li a, .nav2 ul li ul li ul li a {
 	width:313px;
 }
 header h1 {
@@ -132,7 +134,7 @@ header h1 {
 .tip-nav {
 	clear:both;
 	overflow:hidden;
-	margin:0 0 26px;
+	margin:0 0 30px;
 }
 .tip-nav li {
 	float:left;
@@ -141,9 +143,17 @@ header h1 {
 	font-weight:bold;
     font-family:'Ekibastuz';
 	list-style:none;
-    padding:0 22px 0 0;
-	margin:0 16px 26px 0;
+    padding:0 28px 0 0;
+	margin:0 16px 0 0;
 	background:url('../img/nav_arrow.png') no-repeat right top;
+}
+.tip-nav li:last-child {
+	padding-right:0;
+	margin-right:0;
+	background:none;
+}
+.tip-nav > .home > a {
+	visibility:hidden;
 }
 /*
 .tip-nav li:last-child {
@@ -249,8 +259,7 @@ header h1 {
 .b-content{
 	position:relative;
     overflow: hidden;
-    margin: 0 0 28px 0;
-	margin-bottom: 58px;
+    margin: 0 0 40px 0;
 }
 /*--------------slider--------------*/
 .b-slider{
@@ -440,7 +449,7 @@ background:pink;
 .slide-insert, .slide-insert2 {
 	position:absolute;
 	left:382px;
-	bottom:21px;
+	top:136px;
 }
 .navigation {
 	position:absolute;
@@ -451,7 +460,7 @@ background:pink;
 	display:none;
 	position:absolute;
 	left:0;
-	top:315px;
+	top:230px;
 	z-index:1010;
 	width:100%;
 	overflow:hidden;
@@ -723,28 +732,6 @@ body {
 @keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
-}
-
-@media screen and (max-height: 768px) {
-	header {
-		height:261px;
-	}	
-	.b-logo{
-		padding: 74px 0 0 131px;
-		padding-left:5%;
-	}
-	nav{
-		padding: 124px 0 0 0;
-	}
-	.object {
-		top:261px;
-	}
-	.object-fade {
-		top:261px;
-	}
-	.loading {
-		top:261px;
-	}
 }
 
 .b-history.object {
