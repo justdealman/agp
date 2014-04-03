@@ -13,9 +13,13 @@ $(window).load(function () {
 		$('nav ul').hover(
 			function() {
 				$('.tip-nav').css({'visibility': 'hidden'});
+				$('nav > ul > li').css({'visibility': 'visible !important;'});
+					$('nav > ul > li:nth-child(1), nav > ul > li:nth-child(3)').css({'visibility': 'visible'});
 			},
 			function() {
 				$('.tip-nav').css({'visibility': 'visible'});
+				$('nav > ul > li').css({'visibility': 'hidden !important;'});
+					$('nav > ul > li:nth-child(1), nav > ul > li:nth-child(3)').css({'visibility': 'hidden'});
 			}
 		);
 		$('.loading').fadeOut(150);
@@ -132,9 +136,11 @@ $(document).ready(function () {
 			$('nav ul').hover(
 				function() {
 					$('.tip-nav').css({'visibility': 'hidden'});
+					$('nav > ul > li:nth-child(1), nav > ul > li:nth-child(3)').css({'visibility': 'visible'});
 				},
 				function() {
 					$('.tip-nav').css({'visibility': 'visible'});
+					$('nav > ul > li:nth-child(1), nav > ul > li:nth-child(3)').css({'visibility': 'hidden'});
 				}
 			);
 			$('.tip-nav li.home > a, .b-logo a, nav > ul > li:nth-child(2) > a').bind('click', 
