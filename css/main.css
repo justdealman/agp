@@ -711,7 +711,7 @@ body {
 .loading {
 	position:absolute;
 	left:0;
-	top:315px;
+	top:230px;
 	z-index:1020;
 	width:100%;
 	overflow:hidden;
