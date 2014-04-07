@@ -11,9 +11,8 @@ $(window).load(function () {
 		$('.slide-insert').css({'margin-top': '0'});
 		$('.tip-nav').css({'margin-bottom': '30px'});
 		$('nav ul li ul').hide();
-		$('nav > ul > li').css({'visibility': 'hidden'});
-		current = $('nav ul li.show > a[data-accessory='+objectid+']').parents('.level1');
-		current.css({'visibility': 'visible'});
+		var current = $('nav ul li.show > a[data-accessory='+objectid+']').parents('.level1').addClass('active');
+		current.siblings().addClass('passive');
 		if ( current.index() == 0 ) {
 			$('.slide-insert').css({'margin-top': '-22px'});
 			$('.tip-nav').css({'margin-bottom': '34px'});
@@ -25,28 +24,14 @@ $(window).load(function () {
 		$('nav ul').hover(
 			function() {
 				$('.tip-nav').css({'visibility': 'hidden'});
-				current.siblings().css({'visibility': 'visible'});
+				$('nav > ul > li.level1.passive').addClass('hover');
 			},
 			function() {
 				$('.tip-nav').css({'visibility': 'visible'});
-				current.siblings().css({'visibility': 'hidden'});
+				$('nav > ul > li.level1.passive').removeClass('hover');
 			}
 		);
 		$('.loading').fadeOut(150);
-		$('.tip-nav li.home > a, .b-logo a').bind('click', 
-			function() {
-				$('.slide-insert').empty();
-				$('header h1').fadeIn(1000);
-				$('nav > ul > li').css({'visibility': 'visible'});
-				$('nav > ul > li').removeClass('level1');
-				$('.object').fadeOut(1000);
-				$('.object .info').css({'left': -2*pwidth+'px'});
-				$('.object .slides').css({'left': '0'});
-				$('.object .slides .show').fadeIn(0);
-				$('.object .slides .pagination').removeClass('active');
-				return false;
-			}
-		);
 		return false;
 	}
 	$('.loading').fadeOut(150);
@@ -130,10 +115,9 @@ $(document).ready(function () {
 
 	var sliderheight = $('.b-slider').height();
 	
-	var current;
 	$('nav > ul > li').addClass('level1');
 	
-	$('nav li.show > a, .b-slider .images > div, .b-search ul li').bind('click', 
+	$('nav li > a, .b-slider .images > div, .b-search ul li').bind('click', 
 		function() {
 			var objectid = $(this).attr('data-accessory');
 			location.hash = objectid;
@@ -148,9 +132,9 @@ $(document).ready(function () {
 			$('.slide-insert').css({'margin-top': '0'});
 			$('.tip-nav').css({'margin-bottom': '30px'});
 			$('nav ul li ul').hide();
-			$('nav > ul > li').css({'visibility': 'hidden'});
-			var current = $(this).parents('.level1');
-			current.delay(250).queue( function(next){ $(this).css({'visibility': 'visible'}); next(); });
+			$('nav > ul > li.level1').removeClass('hover active passive');
+			var current = $(this).parents('.level1').addClass('active');
+			current.siblings().addClass('passive');
 			if ( current.index() == 0 ) {
 				$('.slide-insert').css({'margin-top': '-22px'});
 				$('.tip-nav').css({'margin-bottom': '34px'});
@@ -162,27 +146,26 @@ $(document).ready(function () {
 			$('nav ul').hover(
 				function() {
 					$('.tip-nav').css({'visibility': 'hidden'});
-					current.siblings().css({'visibility': 'visible'});
+					$('nav > ul > li.level1.passive').addClass('hover');
 				},
 				function() {
 					$('.tip-nav').css({'visibility': 'visible'});
-					current.siblings().css({'visibility': 'hidden'});
+					$('nav > ul > li.level1.passive').removeClass('hover');
 				}
 			);
-			$('.tip-nav li.home > a, .b-logo a').bind('click', 
-				function() {
-					$('.slide-insert').empty();
-					$('header h1').fadeIn(0);
-					$('nav > ul > li').css({'visibility': 'visible'});
-					$('nav > ul > li').removeClass('level1');
-					$('.object').fadeOut(1000);
-					$('.object .info').css({'left': -2*pwidth+'px'});
-					$('.object .slides').css({'left': '0'});
-					$('.object .slides .show').fadeIn(0);
-					$('.object .slides .pagination').removeClass('active');
-					return false;
-				}
-			);
+			return false;
+		}
+	);
+	$('.tip-nav li.home > a, .b-logo a').bind('click', 
+		function() {
+			$('.slide-insert').empty();
+			$('header h1').fadeIn(0);
+			$('nav > ul > li.level1').removeClass('hover passive active');
+			$('.object').fadeOut(1000);
+			$('.object .info').css({'left': -2*pwidth+'px'});
+			$('.object .slides').css({'left': '0'});
+			$('.object .slides .show').fadeIn(0);
+			$('.object .slides .pagination').removeClass('active');
 			return false;
 		}
 	);

@@ -95,7 +95,6 @@ nav ul li a:hover, .nav2 ul li a:hover{
 	text-decoration:none;
 }
 nav ul li.sub.active > a, .nav2 ul li.sub.active > a {
-    color: #009564 !important;
 	background:url('../img/nav_arrow.png') no-repeat right top;
 }
 nav ul li ul, .nav2 ul li ul {
@@ -122,11 +121,14 @@ nav ul li ul li ul, .nav2 ul li ul li ul {
 nav ul li ul li ul li a, .nav2 ul li ul li ul li a {
 	width:313px;
 }
-nav ul li.level1.hover {
+nav ul li.level1.current {
 	visibility:visible;
 }
-nav ul li.level1.current {
+nav ul li.level1.passive {
 	visibility:hidden;
+}
+nav ul li.level1.hover {
+	visibility:visible !important;
 }
 header h1 {
 	color:#009564;
