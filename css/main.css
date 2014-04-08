@@ -20,6 +20,7 @@ body{
     background: url("../img/bodyback.png") repeat;
 min-width:1000px;
 overflow-x:hidden;
+overflow-y:scroll;
 }
 /*-----------------------------------LAYERS----------------------------------*/
 .l-wrap {
@@ -744,7 +745,86 @@ body {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
 }
+.loading > ul {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:32px;
+	height:32px;
+	padding:0;
+	margin:-16px 0 0 -16px;
+}
+.loading > ul > li {
+	float:left;
+	width:16px;
+	height:16px;
+	list-style:none;
+	padding:0;
+	margin:0;
+	background:#ffffff;
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:1.6s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+	-moz-animation-name:loading;
+	-moz-animation-duration:1.6s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-timing-function:linear;
+	-ms-animation-name:loading;
+	-ms-animation-duration:1.6s;
+	-ms-animation-iteration-count:infinite;
+	-ms-animation-timing-function:linear;
+	-o-animation-name:loading;
+	-o-animation-duration:1.6s;
+	-o-animation-iteration-count:infinite;
+	-o-animation-timing-function:linear;
+	animation-name:loading;
+	animation-duration:1.6s;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+}
+.loading > ul > li:nth-child(1) {
+	-webkit-animation-delay:0s;
+}
+.loading > ul > li:nth-child(2) {
+	-webkit-animation-delay:0.4s;
+}
+.loading > ul > li:nth-child(4) {
+	-webkit-animation-delay:0.8s;
+}
+.loading > ul > li:nth-child(3) {
+	-webkit-animation-delay:1.2s;
+}
+@-webkit-keyframes loading {
+	0% { background:#ffffff; }
+	75% { background:#aaaaaa; }
+	100% { background:#ffffff; }
+}
+@-moz-keyframes loading {
+	0% { background:#ffffff; }
+	75% { background:#aaaaaa; }
+	100% { background:#ffffff; }
+}
+@-ms-keyframes loading {
+	0% { background:#ffffff; }
+	75% { background:#aaaaaa; }
+	100% { background:#ffffff; }
+}
+@-o-keyframes loading {
+	0% { background:#ffffff; }
+	75% { background:#aaaaaa; }
+	100% { background:#ffffff; }
+}
+@keyframes loading {
+	0% { background:#ffffff; }
+	75% { background:#aaaaaa; }
+	100% { background:#ffffff; }
+}
 
 .b-history.object {
 	display:block;
+}
+.column2 a:hover {
+	color:#4e504f;
+	text-decoration:none;
 }
