@@ -106,7 +106,10 @@ $(document).ready(function () {
 		}
 	);
 	
-	
+	$('nav > ul > li > ul').each(function() {
+		var lvl2height = $(this).height();
+		$(this).find('ul').css({'min-height': lvl2height+'px'});
+	});
 	
 	$('nav ul li').has('ul').addClass('sub');
 	
@@ -172,6 +175,7 @@ $(document).ready(function () {
 	);
 	$('.tip-nav li.home > a, .b-logo a').bind('click', 
 		function() {
+			location.hash = "";
 			$('.slide-insert').empty();
 			$('header h1').fadeIn(0);
 			$('nav > ul > li.level1').removeClass('hover passive active');
