@@ -86,11 +86,11 @@ $(document).ready(function () {
 
 	$('nav ul li').hover(
 		function() {
-			$(this).children('ul').stop(true, true).delay(250).fadeIn(0);
+			$(this).children('ul').stop(true, true).delay(500).fadeIn(0);
 			$(this).addClass('active');
 		},
 		function() {
-			$(this).children('ul').stop(true, true).delay(250).fadeOut(0);
+			$(this).children('ul').stop(true, true).delay(500).fadeOut(0);
 			$(this).removeClass('active');
 		}
 	);

@@ -46,9 +46,19 @@ footer{
 display:block;
 margin:0 auto;
 position:relative; 
-margin-top:-109px;
-height:100px;
+margin-top:-34px;
+height:25px;
 width:100%;
+}
+footer .author {
+	float:right;
+	color:#666;
+    font: 12px/13px 'PT Sans', sans-serif;
+	margin:0;
+}
+footer .author a:hover {
+	color:#666;
+	text-decoration:none;
 }
 /*-----------------------------------BLOCKS----------------------------------*/
 .b-logo{
@@ -824,7 +834,14 @@ body {
 .b-history.object {
 	display:block;
 }
-.column2 a:hover {
-	color:#4e504f;
+.column2 a {
+    color:#009564 !important;
 	text-decoration:none;
+}
+.column2 a:hover {
+    color:#4e504f !important;
+	text-decoration:none;
+}
+.slides .slides_control {
+	overflow:visible !important;
 }
