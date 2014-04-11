@@ -84,7 +84,18 @@ $(document).ready(function () {
 		autoReinitialiseDelay: 100
 	});
 
-	$('nav ul li').hover(
+	$('nav > ul > li').hover(
+		function() {
+			$(this).children('ul').stop(true, true).fadeIn(0);
+			$(this).addClass('active');
+		},
+		function() {
+			$(this).children('ul').stop(true, true).fadeOut(0);
+			$(this).removeClass('active');
+		}
+	);
+
+	$('nav > ul > li > ul > li').hover(
 		function() {
 			$(this).children('ul').stop(true, true).delay(500).fadeIn(0);
 			$(this).addClass('active');
@@ -94,6 +105,9 @@ $(document).ready(function () {
 			$(this).removeClass('active');
 		}
 	);
+	
+	
+	
 	$('nav ul li').has('ul').addClass('sub');
 	
     function bindHoverFlux(){

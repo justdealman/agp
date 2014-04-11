@@ -834,11 +834,11 @@ body {
 .b-history.object {
 	display:block;
 }
-.column2 a {
+.column2 a, footer a {
     color:#009564 !important;
 	text-decoration:none;
 }
-.column2 a:hover {
+.column2 a:hover, footer a:hover {
     color:#4e504f !important;
 	text-decoration:none;
 }
