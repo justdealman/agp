@@ -694,9 +694,13 @@ background:pink;
 }
 .slides ul.pagination li span {
 	opacity:0.5;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter:alpha(opacity=50);
 }
 .slides ul.pagination li span:hover {
 	opacity:1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter:alpha(opacity=100);
 }
 .slides ul.pagination.active li span.big {
 	display:none;

@@ -32,9 +32,10 @@
             countOfSlides = miniatures.length;
 
             big = '<div class="big" style= "width:' + bigSizeWidth + 'px; height:' + bigSizeHeight +
-                'px; background-image: url(\''+ bigimages[0].src +'\'); background-size: cover;"></div>';
+                'px; background-image: url(\''+ bigimages[0].src +'\'); background-repeat: no-repeat; background-size: cover; "></div>';
             small = '<div class="small" style= "width:' + smallSizeWidth + 'px; height:' + smallSizeHeight + 'px"></div>';
-            console.log(bigimages[0]);
+			
+            //console.log(bigimages[0]);
             this.append(big);
 
             this.append('<div class="miniaWrapper" style="width:' + bigSizeWidth + 'px; margin-top:' + marginOffset + 'px;"></div>');
@@ -45,7 +46,7 @@
             for (var i=0; i<miniatures.length; i++){
                 this.find('.miniatures').append('<div class="small" style= "width:' + smallSizeWidth + 'px; height:' + smallSizeHeight +
                     'px; background-image: url(' + miniatures[i].src +
-                    ');  background-size: cover; margin-right:' + marginOffset + 'px; cursor: pointer;"></div>');
+                    ');  background-repeat: no-repeat; background-size: cover; margin-right:' + marginOffset + 'px; cursor: pointer;"></div>');
             }
 
             $(this.find('.small')).css({opacity:0.5});
