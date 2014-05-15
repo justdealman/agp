@@ -230,9 +230,9 @@ $(document).ready(function () {
 
 	// Object sizes
 	
-	var logoposition = $('.slidewrap:first-child').width() - 68;
-	$('.b-logo').css({'padding-left': logoposition + 'px'});
-	var topmargin = logoposition + 250;
+	var logoposition = $('.slidewrap:first-child').width();
+	$('.b-logo').css({'padding-left': logoposition-68 + 'px'});
+	var topmargin = (logoposition*2)+5;
 	$('nav, header h1').css({'margin-left': topmargin + 'px'});
 	$('.slide-insert, .slide-insert2').css({'left': topmargin + 'px'});
 	
